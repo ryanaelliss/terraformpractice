@@ -5,6 +5,11 @@ terraform {
       version = "4.60.0"
     }
   }
+  backend "s3" {
+    bucket = "rellis-terraforms3"
+    key = "terraform.tfstate"
+    region = "us-east-1"
+  }
 }
 
 provider "aws" {
